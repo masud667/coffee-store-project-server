@@ -3,22 +3,22 @@ import { createRoot } from "react-dom/client";
 import "./index.css";
 
 import { createBrowserRouter, RouterProvider } from "react-router";
-import MainLayout from "./Layout/MAinLayout.jsx";
-import Home from "./Components/Home.jsx";
 import AddCoffee from "./Components/AddCoffee.jsx";
 import Updatecoffee from "./Components/Updatecoffee.jsx";
+import MainLayout from "./Components/MainLayout.jsx";
+import Home from "./Components/Home.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    Component: <MainLayout></MainLayout>,
+    Component: MainLayout,
     children: [
       {
         index: true,
-        Component: <Home></Home>,
+        Component: Home,
       },
       {
-        path: "addcoffe",
+        path: "/addCoffee",
         Component: <AddCoffee></AddCoffee>,
       },
       {

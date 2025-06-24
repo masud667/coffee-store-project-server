@@ -1,15 +1,15 @@
 import React from 'react';
 import Header from './Header';
-import AddCoffee from './AddCoffee';
+import { Outlet } from 'react-router';
 
-const Home = () => {
+const MainLayout = () => {
     return (
         <div>
             <Header></Header>
-            <AddCoffee></AddCoffee>
+            <Outlet></Outlet>
             
         </div>
     );
 };
 
-export default Home;
+export default MainLayout;
